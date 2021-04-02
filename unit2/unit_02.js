@@ -161,10 +161,17 @@ y.style.border = "2px solid red"; // <-- Позволяет менять пар�
 
 // Task 16.
 // Создайте два input type=number, куда пользователь может ввести числа. Выведите на страницу сумму данных чисел по нажатию кнопки b-16
-
+const Input161 = document.querySelector(".i-16-1");
+const Input162 = document.querySelector(".i-16-2");
+const out16 = document.querySelector(".out-16");
  
-function t16() {
-
+function t16(fisrstNum,secondNum) {
+  fisrstNum = +Input161.value;
+  secondNum = +Input162.value;
+  console.log(`${fisrstNum} + ${secondNum} = ` + (fisrstNum + secondNum));
+  out16.textContent = `${fisrstNum} + ${secondNum} = ` + (fisrstNum + secondNum);
+  Input161.value = "";
+  Input162.value = "";
 }
 
 document.querySelector(".b-16").onclick = t16;
@@ -172,7 +179,9 @@ document.querySelector(".b-16").onclick = t16;
 // Task 17.
 // Создайте input type="text" куда пользователь может ввести строку и число. Создайте функцию, которая запускается по нажатию на кнопку. Получите значение из input в переменную t. А затем сделайте операцию t = parseInt(t), и результат операции выведите в out-17. Прочитайте за эту операцию. Попробуйте по очереди вводить 44, 44aaa, 44.3, a45 . Изучите вывод.
 
-function t17() {}
+function t17() {
+  
+}
 
 document.querySelector(".b-17").onclick = t17;
 
