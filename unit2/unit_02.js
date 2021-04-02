@@ -87,8 +87,8 @@ const out10 = document.querySelector(".out-10");
 
 function t10(value) {
   value = +Input10.value;
-  console.log(value*10);
-  out10.textContent = value*10;
+  console.log(value * 10);
+  out10.textContent = value * 10;
   Input10.value = "";
 }
 
@@ -96,8 +96,15 @@ document.querySelector(".b-10").onclick = t10;
 
 // Task 11.
 // Создайте input и кнопку. По нажатию на кнопку выполняется функция, которая выводит на страницу в .out-11 число, которое ввел пользователь и к нему добавленное число 10.
+const Input11 = document.querySelector(".i-11");
+const out11 = document.querySelector(".out-11");
 
-function t11() {}
+function t11(value) {
+  value = +Input11.value;
+  console.log(value + 10);
+  out11.textContent = value + 10;
+  Input11.value = "";
+}
 
 document.querySelector(".b-11").onclick = t11;
 
