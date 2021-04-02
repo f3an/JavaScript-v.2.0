@@ -164,12 +164,13 @@ y.style.border = "2px solid red"; // <-- Позволяет менять пар�
 const Input161 = document.querySelector(".i-16-1");
 const Input162 = document.querySelector(".i-16-2");
 const out16 = document.querySelector(".out-16");
- 
-function t16(fisrstNum,secondNum) {
+
+function t16(fisrstNum, secondNum) {
   fisrstNum = +Input161.value;
   secondNum = +Input162.value;
   console.log(`${fisrstNum} + ${secondNum} = ` + (fisrstNum + secondNum));
-  out16.textContent = `${fisrstNum} + ${secondNum} = ` + (fisrstNum + secondNum);
+  out16.textContent =
+    `${fisrstNum} + ${secondNum} = ` + (fisrstNum + secondNum);
   Input161.value = "";
   Input162.value = "";
 }
@@ -178,24 +179,39 @@ document.querySelector(".b-16").onclick = t16;
 
 // Task 17.
 // Создайте input type="text" куда пользователь может ввести строку и число. Создайте функцию, которая запускается по нажатию на кнопку. Получите значение из input в переменную t. А затем сделайте операцию t = parseInt(t), и результат операции выведите в out-17. Прочитайте за эту операцию. Попробуйте по очереди вводить 44, 44aaa, 44.3, a45 . Изучите вывод.
+const t = document.querySelector(".i-17");
+const out17 = document.querySelector(".out-17");
 
-function t17() {
-  
-}
+function t17(parsei) {
+  parsei = parseInt(t.value);
+  console.log(parsei);
+  out17.textContent = parsei;
+  t.value = "";
+} // 44 число, 44ааа - число, 44.3 = 44, а45 - не число;
 
 document.querySelector(".b-17").onclick = t17;
 
 // Task 18.
 // Создайте input type="text" куда пользователь может ввести строку и число. Создайте функцию, которая запускается по нажатию на кнопку. Получите значение из input в переменную t. А затем сделайте операцию t = parseFloat(t), и результат операции выведите в консоль. Прочитайте за эту операцию. Попробуйте по очереди вводить 44, 44aaa, 44.3, a45 . Изучите вывод.
 
-function t18() {}
+const t2 = document.querySelector(".i-18");
+const out18 = document.querySelector(".out-18");
+
+function t18(parsef) {
+  parsef = parseFloat(t2.value);
+  console.log(parsef);
+  out18.textContent = parsef;
+  t2.value = "";
+} // 44 число, 44ааа - число, 44.3 = 43.3 , а45 - не число;
 
 document.querySelector(".b-18").onclick = t18;
 
 // Task 19.
 // Создайте два input type=number, куда пользователь может ввести отрицательные числа. Выведите на страницу сумму данных чисел. Мы это делали! Зачем? Затем, что нужно понимать как влияет перевод в число с помощью + и parseInt на отрицательные числа!!!
 
-function t19() {}
+function t19() {
+  
+}
 
 document.querySelector(".b-19").onclick = t19;
 
