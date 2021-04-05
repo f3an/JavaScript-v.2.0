@@ -6,9 +6,9 @@ function f1(input, num, out) {
   num = +input.value;
   out = document.querySelector(".out-1");
   if (num == 4) {
-    out.textContent = `it is 4`;
+    out.textContent = true;
   } else {
-    out.textContent = `it isn't 4`;
+    out.textContent = false;
   }
 }
 
@@ -50,10 +50,13 @@ document.querySelector(".b-3").onclick = f3;
 
 // Task 4. Создайте на странице input[type=number] с классом i-4, куда пользователь может ввести год своего рождения. Есть кнопка b-4 которая запускает функцию f4. Функция должна вывести в  .out-4 число 1 если пользователю больше или равно 18 лет, и 0 если меньше.
 
-function f4(input, out) {
+function f4(input, out, res, date) {
   input = +document.querySelector(".i-4").value;
   out = document.querySelector(".out-4");
-  if (input >= 18) {
+  date = new Date();
+  res = parseInt(date.getFullYear()) - input ;
+  console.log(res);
+  if (res <= 2003) {
     out.textContent = 1;
   } else {
     out.textContent = 0;
@@ -85,10 +88,10 @@ document.querySelector(".b-5").onclick = f5;
 function f6(input, out) {
   input = +document.querySelector(".i-6").value;
   out = document.querySelector(".out-6");
-  if (input % 2) {
-    out.textContent = "Odd";
-  } else {
+  if (input % 2 === 0) {
     out.textContent = "Even";
+  } else {
+    out.textContent = "Odd";
   }
 }
 
@@ -101,6 +104,7 @@ function f7(input1, input2, out, res) {
   input1 = +document.querySelector(".i-71").value;
   input2 = +document.querySelector(".i-72").value;
   out = document.querySelector(".out-7");
+  // res = input1 ** input2;
   res = Math.pow(input1, input2);
   out.textContent = `${input1} ** ${input2} = ${res}`;
 }
