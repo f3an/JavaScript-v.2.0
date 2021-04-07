@@ -32,9 +32,9 @@ function f4(input, out) {
   out = document.querySelector("div.out-4");
 
   if (input.checked) {
-    out.textContent = "True";
+    out.textContent = true;
   } else {
-    out.textContent = "False";
+    out.textContent = false;
   }
 }
 
@@ -50,7 +50,7 @@ function f5(input, out) {
   if (input.checked) {
     out.textContent = input.value;
   } else {
-    out.textContent = "False";
+    out.textContent = false;
   }
 }
 
