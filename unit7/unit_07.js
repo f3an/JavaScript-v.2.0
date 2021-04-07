@@ -2,8 +2,9 @@
 // Напишите функцию t1, которая при нажатии кнопки выводит в out - 1 переменную a1.
 
 let a1 = 8;
-function t1() {
-
+function t1(out) {
+    out = document.querySelector(".out-1");
+    out.textContent = a1;
 }
 
 document.querySelector('.b-1').onclick = t1;
