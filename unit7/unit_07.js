@@ -83,7 +83,12 @@ document.querySelector('.b-6').onclick = function () {
 // Напишите функцию t7, которая возвращает случайный цвет в формате rgb(x, y, z)(строка).Где x, y, z - случайные числа в диапазоне[0, 255]. 
 
 function t7() {
-    //return `rgb(${t6(0,255)}....допишите сами
+    let rgb=" ";
+    for (let i = 0; i < 3; i++) {
+        rgb += t6(0,255)+" ";
+    }
+    console.log(`rgb(${rgb})`);
+    return `rgb(${rgb})`;
 }
 
 document.querySelector('.b-7').onclick = function () {
@@ -95,7 +100,7 @@ document.querySelector('.b-7').onclick = function () {
 // Напишите функцию t8, которая принимает строку в качестве параметра и возвращает результат с очищенными пробелами в начале и вконце строки.Т.е.принимает _hello_(где знак _ символизирует пробел), а возвращает hello.Для удаления пробелов - используйте trim.
 
 function t8(str) {
-
+    return str.trim();
 }
 
 document.querySelector('.b-8').onclick = function () {
@@ -107,7 +112,7 @@ document.querySelector('.b-8').onclick = function () {
 // Напишите функцию t9, которая принимает число и возвращает true, если число четное, и false если не четное. 
 
 function t9(num) {
-
+    return (!(num%2))? true : false;
 }
 
 document.querySelector('.b-9').onclick = function () {
@@ -119,7 +124,7 @@ document.querySelector('.b-9').onclick = function () {
 // Создайте функцию t10, которая принимает 2 числа и возвращает большее из них.В случае равенства - любое из чисел.
 
 function t10(a, b) {
-
+    return a>b? a : b;
 }
 
 document.querySelector('.b-10').onclick = function () {
