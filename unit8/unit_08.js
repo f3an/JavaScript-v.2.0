@@ -4,8 +4,15 @@
 // от 1 до 50 включительно. Разделитель - пробел. Задача решается с помощью цикла.
 
 
-function t1() {
-
+function t1(elem,out,k) {
+    out = document.querySelector(".out-1");
+    elem = "";
+    k = 1
+    while (k<=50){
+        elem += k + " ";
+        k++;
+    }
+    out.textContent = elem;
 }
 
 document.querySelector('.b-1').onclick = t1;
