@@ -122,7 +122,16 @@ document.querySelector(".b-6").onclick = t6;
 //     4 3 2 1
 // Задача решается с помощью цикла  while.
 
-function t7() {}
+function t7(out, input, elem) {
+  out = document.querySelector(".out-7");
+  input = +document.querySelector(".i-7").value;
+  elem = "";
+  while (input >= 0) {
+    elem += input + " ";
+    input--;
+  }
+  out.textContent = elem;
+}
 
 document.querySelector(".b-7").onclick = t7;
 
@@ -134,7 +143,17 @@ document.querySelector(".b-7").onclick = t7;
 //     4 5 6 7 8
 // Задача решается с помощью цикла  while.
 
-function t8() {}
+function t8(input1, input2, out, elem) {
+  input1 = +document.querySelector(".i-81").value;
+  input2 = +document.querySelector(".i-82").value;
+  out = document.querySelector(".out-8");
+  elem = "";
+  while (input1 <= input2) {
+    elem += input1 + " ";
+    input1 ++;
+  }
+  out.textContent = elem;
+}
 
 document.querySelector(".b-8").onclick = t8;
 
