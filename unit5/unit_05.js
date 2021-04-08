@@ -235,7 +235,7 @@ document.querySelector(".b-12").onclick = t12;
 function t13(input) {
   input = document.querySelectorAll("input.i-13");
   for (let i = 0; i < input.length; i++) {
-    console.log(i + 1 + "-" + input[i].value);
+    input[i].value = i+1;
   }
 }
 
