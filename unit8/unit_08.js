@@ -166,7 +166,25 @@ document.querySelector(".b-8").onclick = t8;
 // 6 7 8
 // Задача решается с помощью цикла. Подсказка - вначале делаем проверку, а потом запускаем цикл  while.
 
-function t9() {}
+function t9(input1, input2, out, elem) {
+  input1 = +document.querySelector(".i-91").value;
+  input2 = +document.querySelector(".i-92").value;
+  out = document.querySelector(".out-9");
+  elem = "";
+  if (input1<input2) {
+    while (input1 <= input2) {
+      elem += input1 + " ";
+      input1 ++;
+    }
+    out.textContent = elem;
+  } else {
+    while (input2 <= input1) {
+      elem += input2 + " ";
+      input2 ++;
+    }
+    out.textContent = elem;
+  }
+}
 
 document.querySelector(".b-9").onclick = t9;
 
@@ -174,7 +192,16 @@ document.querySelector(".b-9").onclick = t9;
 // Кнопка b-10 запускает функцию t10. Функция должна выводить в out-10 четные годы от 1950 до 2000 включительно.
 // Разделитель - пробел. Задача решается через цикл, а четность - через шаг (равный 2).
 
-function t10() {}
+function t10(out,elem,k) {
+  out = document.querySelector(".out-10");
+  elem = "";
+  k = 1950;
+  while (k<=2000) {
+    elem += k + " ";
+    k+=2;
+  }
+  out.textContent = elem
+}
 
 document.querySelector(".b-10").onclick = t10;
 
@@ -186,7 +213,18 @@ document.querySelector(".b-10").onclick = t10;
 //     В результате должно получиться так:
 //     one 3 4 two
 
-function t11() {}
+function t11(div, out, elem, k) {
+  div = document.querySelectorAll("div.div-11");
+  out = document.querySelector(".out-11");
+  elem = "";
+  k = 0;
+  while (k<div.length) {
+    elem += div[k].textContent + " ";
+    k++;
+  }
+
+  out.textContent = elem;
+}
 
 document.querySelector(".b-11").onclick = t11;
 
@@ -196,7 +234,16 @@ document.querySelector(".b-11").onclick = t11;
 // перебрать их с помощью цикла  while. Обращение к div выглядит так elem[i]
 // применить к каждому elem[i].style.background = ‘orange’
 
-function t12() {}
+function t12(div, out, k) {
+  div = document.querySelectorAll("div.div-12");
+  out = document.querySelector(".out-12");
+  k = 0;
+  while (k<div.length) {
+    div[k].style.background = "orange";
+    div[k].style.margin = "3px";
+    k++;
+  }
+}
 
 document.querySelector(".b-12").onclick = t12;
 
@@ -206,7 +253,14 @@ document.querySelector(".b-12").onclick = t12;
 // перебрать их с помощью цикла  while. Обращение к элементу выглядит так elem[i]
 // применить к каждому elem[i].value, причем к value первого должно равняться 1, второго - 2, третьего - 3...
 
-function t13() {}
+function t13(input, k) {
+  input = document.querySelectorAll(".i-13");
+  k = 0;
+  while (k<input.length) {
+    input[k].value = k+1;
+    k++
+  }
+}
 
 document.querySelector(".b-13").onclick = t13;
 
@@ -216,7 +270,17 @@ document.querySelector(".b-13").onclick = t13;
 // перебрать их с помощью цикла  while. Обращение к элементу выглядит так elem[i]
 // вывести в out-14 value выбранного. Проверить выбран ли элемент можно с помощью elem[i].checked.
 
-function t14() {}
+function t14(input, out, k) {
+  input = document.querySelectorAll("input.i-14");
+  out = document.querySelector(".out-14");
+  k = 0;
+  while (k<input.length) {
+    if (input[k].checked) {
+      out.textContent = input[k].value;
+    }
+    k++;
+  }
+}
 
 document.querySelector(".b-14").onclick = t14;
 
@@ -225,6 +289,15 @@ document.querySelector(".b-14").onclick = t14;
 // 10 0 9 1 8 2 7 3 6 4 5 5 4 6 3 7 2 8 1 9 0 10
 // Для вывода использовать цикл  while. Разделитель пробел.
 
-function t15() {}
+function t15(out,k,elem) {
+  out = document.querySelector(".out-15");
+  elem = "";
+  k = 0;
+  while (k<=10) {
+    elem +=  10 - k + " " + k+" "; 
+    k++;
+  }
+  out.textContent = elem;
+}
 
 document.querySelector(".b-15").onclick = t15;
