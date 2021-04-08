@@ -22,8 +22,15 @@ document.querySelector('.b-1').onclick = t1;
 //     2 4 6 ... 122
 // от 2 до 122 c шагом 2. Разделитель - пробел. Задача решается с помощью цикла  while.
 
-function t2() {
-
+function t2(elem,out,k) {
+    out = document.querySelector(".out-2");
+    elem = "";
+    k = 2
+    while (k<=122){
+        elem += k + " ";
+        k += 2;
+    }
+    out.textContent = elem;
 }
 
 document.querySelector('.b-2').onclick = t2;
@@ -34,8 +41,15 @@ document.querySelector('.b-2').onclick = t2;
 //     25 24 23 22 . . 7
 // от 25 до 7 c шагом 1. Разделитель - пробел. Задача решается с помощью цикла  while.
 
-function t3() {
-
+function t3(elem,out,k) {
+    out = document.querySelector(".out-3");
+    elem = "";
+    k = 25
+    while (k>=7){
+        elem += k + " ";
+        k--;
+    }
+    out.textContent = elem;
 }
 
 document.querySelector('.b-3').onclick = t3;
@@ -46,8 +60,15 @@ document.querySelector('.b-3').onclick = t3;
 // от 77 до 35 c шагом 3. Разделитель - знак подчеркивания. Задача решается с помощью цикла  while.
 
 
-function t4() {
-
+function t4(elem,out,k) {
+    out = document.querySelector(".out-4");
+    elem = "";
+    k = 77
+    while (k>=35){
+        elem += k + "_";
+        k -= 3;
+    }
+    out.textContent = elem;
 }
 
 document.querySelector('.b-4').onclick = t4;
