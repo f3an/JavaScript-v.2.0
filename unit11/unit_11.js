@@ -11,10 +11,9 @@ function showArr(domElem, arr) {
 
 let d1 = [33, 'best', 66, 'best'];
 
-function f1() {
-    /**
-     * ваш код здесь
-     */
+function f1(temp) {
+    temp = document.querySelector(".i-1").value;
+    d1.push(temp);
     showArr('.out-1', d1);
 }
 
@@ -25,7 +24,7 @@ document.querySelector('.b-1').onclick = f1;
 // функция выполняется при нажатии кнопки b-2
 
 function f2() {
-
+    d1.pop();
     showArr('.out-2', d1);
 }
 
@@ -36,7 +35,7 @@ document.querySelector('.b-2').onclick = f2;
 // функция выполняется при нажатии кнопки b-3
 
 function f3() {
-
+    d1.shift();
     showArr('.out-3', d1);
 }
 
@@ -47,8 +46,9 @@ document.querySelector('.b-3').onclick = f3;
 // функция выполняется при нажатии кнопки b-4
 
 
-function f4() {
-
+function f4(temp) {
+    temp = document.querySelector(".i-4").value;
+    d1.push(temp);
     showArr('.out-4', d1);
 }
 
@@ -58,8 +58,9 @@ document.querySelector('.b-4').onclick = f4;
 // Напишите функцию f5, которая применяет метод unshift к массиву d1, данные для массива берите из i-5, а затем выводит его (showArr) в .out-5
 // функция выполняется при нажатии кнопки b-5
 
-function f5() {
-
+function f5(temp) {
+    temp = document.querySelector(".i-5").value;
+    d1.unshift(temp);
     showArr('.out-5', d1);
 }
 
