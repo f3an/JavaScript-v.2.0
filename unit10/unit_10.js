@@ -19,7 +19,7 @@ function f2() {
   let out = "";
   for (let i = 0; i < ar2.length; i++) {
     out += ar2[i] + " ";
-  }
+  }//qwqe
   document.querySelector(".out-2").innerHTML = out;
 }
 
