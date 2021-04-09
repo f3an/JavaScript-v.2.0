@@ -19,7 +19,7 @@ function f2() {
   let out = "";
   for (let i = 0; i < ar2.length; i++) {
     out += ar2[i] + " ";
-  }//qwqe
+  }
   document.querySelector(".out-2").innerHTML = out;
 }
 
@@ -31,9 +31,12 @@ document.querySelector(".b-2").onclick = f2;
 // Вывод в out-3
 // Тест допустим массив [1,2,3] вывод - 3
 
-// let ar3 =  // переменную обьявляем здесь!!!!
+let ar3 = ["qwe", 12, 12.34, true, 23];
 
-function f3() {}
+function f3(out) {
+  out = document.querySelector(".out-3");
+  out.innerHTML = ar3.length;
+}
 
 document.querySelector(".b-3").onclick = f3;
 
@@ -44,9 +47,24 @@ document.querySelector(".b-3").onclick = f3;
 // Вывод в out-4
 // Тест допустим массив [1,2,3,4,5,6,7,8,9,10] вывод: 1 4 9
 
-// let ar4 =  // переменную обьявляем эту здесь!!!!
+let ar4 = [
+  "Hello",
+  12,
+  12.34,
+  true,
+  "qwe",
+  false,
+  "asdasd",
+  true,
+  "Coder",
+  false,
+  "asdasd",
+];
 
-function f4() {}
+function f4(out) {
+  out = document.querySelector(".out-4");
+  out.innerHTML = ar4[0] + " " + ar4[3] + " " + ar4[8];
+}
 
 document.querySelector(".b-4").onclick = f4;
 
@@ -57,9 +75,12 @@ document.querySelector(".b-4").onclick = f4;
 // Вывод в out-5
 // Тест допустим массив [1,2,3,4,5,6,7,8,9,10] вывод: 8
 
-// let ar5 =
+let ar5 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-function f5() {}
+function f5(out) {
+  out = document.querySelector(".out-5");
+  out.innerHTML = ar5[0] + ar5[2] + ar5[3];
+}
 
 document.querySelector(".b-5").onclick = f5;
 
@@ -68,10 +89,23 @@ document.querySelector(".b-5").onclick = f5;
 // Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
 // Вывод - по нажатию кнопки b-6
 // Вывод в out-6
+const MyBirthDay = new Date("02-06-2000");
 
-// let ar6 =
+let ar6 = [
+  "Ihro",
+  "Aquaris",
+  MyBirthDay.getDate(),
+  MyBirthDay.toLocaleString("default", { month: "long" }),
+];
 
-function f6() {}
+function f6(elem, out) {
+  out = document.querySelector(".out-6");
+  elem = "";
+  for (let i = 0; i < ar6.length; i++) {
+    elem += ar6[i] + " ";
+  }
+  out.innerHTML = elem;
+}
 
 document.querySelector(".b-6").onclick = f6;
 
@@ -83,7 +117,17 @@ document.querySelector(".b-6").onclick = f6;
 
 let ar7 = ["china", "india", "brazil", "japan", "egypt"];
 
-function f7() {}
+function f7(out, elem) {
+  out = document.querySelector(".out-7");
+  ar7[7] = "vietnam";
+  ar7[6] = "turkey";
+  ar7[5] = "italy";
+  elem = "";
+  for (let i = 0; i < ar7.length; i++) {
+    elem += ar7[i] + " ";
+  }
+  out.innerHTML = elem;
+}
 
 document.querySelector(".b-7").onclick = f7;
 
@@ -96,7 +140,19 @@ document.querySelector(".b-7").onclick = f7;
 
 let ar8 = [];
 
-function f8() {}
+function f8(out1, out2, elem) {
+  out1 = document.querySelector(".out-8");
+  out2 = document.querySelector(".out-8-1");
+  ar8[3] = 3.14;
+  ar8[4] = 17;
+  ar8[6] = 5;
+  elem = "";
+  for (let i = 0; i < ar8.length; i++) {
+    elem += ar8[i] + "-";
+  }
+  out1.innerHTML = elem.substring(0, elem.length - 1);
+  out2.innerHTML = ar8.length;
+}
 
 document.querySelector(".b-8").onclick = f8;
 
@@ -108,7 +164,10 @@ document.querySelector(".b-8").onclick = f8;
 
 let ar9 = [100, 200, 300, 400, 700, 121];
 
-function f9() {}
+function f9(out) {
+  out = document.querySelector(".out-9");
+  out.innerHTML = ar9.length - 1;
+}
 
 document.querySelector(".b-9").onclick = f9;
 
@@ -120,7 +179,10 @@ document.querySelector(".b-9").onclick = f9;
 
 let ar10 = [100, 200, 300, 400, 700, 121];
 
-function f10() {}
+function f10(out) {
+  out = document.querySelector(".out-10");
+  out.innerHTML = ar10[1] + ar10[ar10.length - 1];
+}
 
 document.querySelector(".b-10").onclick = f10;
 
@@ -133,7 +195,17 @@ document.querySelector(".b-10").onclick = f10;
 
 let ar11 = [2, 3, 4, 5, 6, 7];
 
-function f11() {}
+function f11(out, temp, elem) {
+  out = document.querySelector(".out-11");
+  temp = ar11[2];
+  ar11[2] = ar11[4];
+  ar11[4] = temp;
+  elem = "";
+  for (let i = 0; i < ar11.length; i++) {
+    elem += ar11[i] + " ";
+  }
+  out.innerHTML = elem;
+}
 
 document.querySelector(".b-11").onclick = f11;
 
@@ -145,7 +217,17 @@ document.querySelector(".b-11").onclick = f11;
 
 let ar12 = ["test", "west", "list", "class", "best"];
 
-function f12() {}
+function f12(out, temp, elem) {
+  out = document.querySelector(".out-12");
+  elem = "";
+  temp = ar12[0];
+  ar12[0] = ar12[ar12.length - 1];
+  ar12[ar12.length - 1] = temp;
+  for (let i = 0; i < ar12.length; i++) {
+    elem += ar12[i] + " ";
+  }
+  out.innerHTML = elem;
+}
 
 document.querySelector(".b-12").onclick = f12;
 
@@ -159,7 +241,14 @@ document.querySelector(".b-12").onclick = f12;
 
 let ar13 = ["test", "west", "list", "class", "best"];
 
-function f13() {}
+function f13(out, element) {
+  out = document.querySelector(".out-13");
+  element = "";
+  for (let i = 0; i < ar13.length; i++) {
+    element += i + " " + ar13[i] + " ";
+  }
+  out.innerHTML = element;
+}
 
 document.querySelector(".b-13").onclick = f13;
 
@@ -171,7 +260,14 @@ document.querySelector(".b-13").onclick = f13;
 
 let ar14 = [1, 2, 3, "hello", 66];
 
-function f14() {}
+function f14(out, elem) {
+  out = document.querySelector(".out-14");
+  elem = "";
+  for (let i = ar14.length - 1; i >= 0; i--) {
+    elem += ar14[i] + " ";
+  }
+  out.innerHTML = elem;
+}
 
 document.querySelector(".b-14").onclick = f14;
 
