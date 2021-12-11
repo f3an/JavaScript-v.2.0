@@ -85,11 +85,11 @@ function f6() {
     [44, 56],
   ];
   for (let i = 0; i < a6.length; i++) {
-    if (a6[i][0] % 3 == 0) {
+    if (a6[i][0] % 2 == 1) {
       out += a6[i][0] + " ";
     }
-    if (a6[i][1] % 3 == 0) {
-      out += a6[i][0] + " ";
+    if (a6[i][1] % 2 == 1) {
+      out += a6[i][1] + " ";
     }
   }
   document.querySelector(".out-6").innerHTML = out;
@@ -133,7 +133,7 @@ function f8() {
   ];
   for (let i = 0; i < a8.length; i++) {
     for (let k = 0; k < a8.length; k++) {
-      if (a8[i][k] % 3 == 0) {
+      if (a8[i][k] % 2 == 1) {
         out += a8[i][k] + " ";
       }
     }
@@ -233,7 +233,7 @@ function f12(out, elem, c) {
     c = a12[i];
     for (let k = 0; k < a12.length; k++) {
       if (c[k] > 0) {
-        elem += c[k];
+        elem += c[k] + " ";
       }
     }
   }
@@ -248,16 +248,26 @@ document.querySelector(".b-12").onclick = f12;
 
 let a13 = [];
 
-function f13(out, period) {
+function f13(out) {
   out = document.querySelector(".out-13");
-  period = 0;
-  for (let i = 0; i < 8; i++) {
-    let temp = [];
-    for (let k = 0; k < 8; k++) {
-        period % 2 === 0 ?
-        temp.push(1):
-        temp.push(0);
-        period++
+  for (let k = 0; k < 8; k++) {
+    temp = [];
+    if (k % 2) {
+      for (let i = 0; i < 8; i++) {
+        if (i % 2) {
+          temp.push(1);
+        } else {
+          temp.push(0);
+        }
+      }
+    } else {
+      for (let i = 0; i < 8; i++) {
+        if (i % 2) {
+          temp.push(0);
+        } else {
+          temp.push(1);
+        }
+      }
     }
     a13.push(temp);
   }
@@ -273,12 +283,12 @@ document.querySelector(".b-13").onclick = f13;
 
 let a14 = [[], [1, 0], [1, 0, 0, 0], [3, 4, 5, 6, 7, 8], [1, 2]];
 
-function f14(out,elem,k) {
+function f14(out, elem, k) {
   out = document.querySelector(".out-14");
   elem = "";
   k = 0;
   for (let i = 0; i < a14.length; i++) {
-    elem += `a14[${k}] = ${a14[i].length} <br>`;
+    elem += `${a14[i].length} `;
     k++;
   }
   out.innerHTML = elem;
@@ -295,13 +305,13 @@ let a15 = [[], [1, 0], [1, 0, 0, 0], [3, 4, 5, 6, 7, 8], [1, 2]];
 function f15(out, elem, max) {
   out = document.querySelector(".out-15");
   elem = "";
-  max = 0;
+  max = [];
   for (let i = 0; i < a15.length; i++) {
-    if (a15[i] > a15[i-1]) {
+    if (a15[i].length > max.length) {
       max = a15[i];
     }
   }
-  elem += `a15.max = ${max.length} <br>`;
+  elem += `${max.length} `;
   out.innerHTML = elem;
 }
 
@@ -324,7 +334,12 @@ console.groupEnd();
 // Впишите в переменную a17 массив, который соответствует всем условиям приведенным ниже ( все console.log должны дать true;
 //  Т.е вы руками просто пишите массив такой, чтобы условия выполнялись.
 
-let a17 = [[1,7,6],[8,7],[1,2],[2,7,8]];
+let a17 = [
+  [1, 7, 6],
+  [8, 7],
+  [1, 2],
+  [2, 7, 8],
+];
 
 console.group("Task 17 ================");
 console.log(a17[3][2] == 8);
@@ -337,7 +352,7 @@ console.groupEnd();
 // Впишите в переменную a18 массив, который соответствует всем условиям приведенным ниже ( все console.log должны дать true;
 //  Т.е вы руками просто пишите массив такой, чтобы условия выполнялись.
 
-let a18 = [3,2,[0,12],3,[8,9]];
+let a18 = [3, 2, [0, 12], 3, [8, 9]];
 
 console.group("Task 18 ================");
 console.log(a18[0] == 3);
@@ -350,7 +365,11 @@ console.groupEnd();
 // Впишите в переменную a19 массив, который соответствует всем условиям приведенным ниже ( все console.log должны дать true;
 //  Т.е вы руками просто пишите массив такой, чтобы условия выполнялись.
 
-let a19 = [[[1,3],3],[[1,2,8],123],[0,[12,3,4,5]]];
+let a19 = [
+  [[1, 3], 3],
+  [[1, 2, 8], 123],
+  [0, [12, 3, 4, 5]],
+];
 
 console.group("Task 19 ================");
 console.log(a19[0][0][1] == 3);
@@ -363,11 +382,11 @@ console.groupEnd();
 // Впишите в переменную a20 массив, который соответствует всем условиям приведенным ниже ( все console.log должны дать true;
 //  Т.е вы руками просто пишите массив такой, чтобы условия выполнялись.
 
-let a20 = [0,[0,[0,9]],[0,1,18],12];
+let a20 = [0, [0, [0, 9]], [0, 1, 18], 12];
 
 console.group("Task 20 ================");
 console.log(a20[1][1][1] == 9);
 console.log(a20[2][2] == 18);
-console.log(a20[3]== 12);
+console.log(a20[3] == 12);
 
 console.groupEnd();
