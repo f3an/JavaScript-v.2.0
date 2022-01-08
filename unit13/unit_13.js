@@ -44,7 +44,7 @@ function f3() {
     odd: "hi",
     mix: "mix",
   };
-  return a3.odd;
+  return a3.five + " " + a3.odd;
   // return
 }
 
@@ -67,7 +67,7 @@ let a4 = {
 function f4(out) {
   out = "";
   for (const key in a4) {
-    out += key + " " + a4[key] + "<br>";
+    out += key + " " + a4[key] + " <br>";
   }
   return out;
 }
@@ -82,7 +82,7 @@ document.querySelector(".b-4").onclick = () => {
 function f5(arr, block) {
   let out = "";
   for (const key in arr) {
-    out += key + " " + arr[key] + "<br>";
+    out += key + " " + arr[key] + " <br>";
   }
   document.querySelector(block).innerHTML = out;
 }
@@ -189,12 +189,15 @@ function f9() {
   let elem = "";
   for (const key in a9) {
     if (a9[key] == input.value) {
-      elem += a9[key] + " ";
+      elem += key + " ";
     } else {
       elem += "";
     }
   }
-  out.textContent = elem;
+
+  elem === "" ? elem = " <br>" : elem = elem;
+
+  out.innerHTML = elem;
 }
 
 document.querySelector(".b-9").onclick = f9;

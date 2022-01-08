@@ -6,18 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Pogoda</title>
 </head>
 
 <body>
-    <div>
-        <p>Task 1. Создайте переменную a = 4. Используя конструкцию if проверьте то a == 4. Выведите сообщение в
-            консоль.</p>
-        <button class="task-1">button</button>
-    </div>
+    <h1 id="header">Получаем прогноз погоды по API <br>
+        JavaScript v2.0. Урок 14 <br>
+        js2.itgid.info</h1>
     <hr>
+    <div class="out">
+        <h3 id="cityname">London</h3>
+        <hr width="70%">
+        <h2 id="temp">0</h2>
+        <p id="desc">s</p>
+        <hr width="50%">
+        <img id="icon">
 
-    <script src="script.js"></script>
+        <select id="city">
+            <option value="2643743">London</option>
+            <option value="625144">Minsk</option>
+            <option value="3099434">Gdańsk</option>
+            <option value="703448">Kyiv</option>
+        <select>
 </body>
-
+    <script src="script.js"></script>
 </html>

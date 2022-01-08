@@ -1,6 +1,22 @@
-html, body {
-    font-family: serif;
+html,
+body {
+  font-family: serif;
 }
 body {
-    margin: 20px;
+  margin: 20px;
+}
+#header {
+  text-align: center;
+}
+.out {
+  text-align: center;
+  margin-left: 35%;
+  height:20rem;
+  width: 7rem;
+  color: black;
+  border-radius: 15px;
+  border: 3px solid rgb(24, 163, 0);
+}
+p {
+  margin: 0px;
 }
