@@ -83,15 +83,21 @@ let a6 = [
 
 function f6() {
   const out = document.querySelector(".out-6");
-  const temp = [];
-  for (let i = 0; i < a6.length; i++) {
-    for (let j = 0; j < a6[i].length; j++) {
-      const element = a6[i][j];
-      temp.push(element);
-    }
+  const temp = [].concat(a6[0],a6[1],a6[2]);
+  // for (let i = 0; i < a6.length; i++) {
+  //   for (let j = 0; j < a6[i].length; j++) {
+  //     const element = a6[i][j];
+  //     temp.push(element);
+  //   }
+  // }
+  // console.log(temp);
+  // out.textContent = temp;
+  let res = "";
+  for (const item of temp) {
+    res += `${item} `;
   }
-  console.log(temp);
-  out.textContent = temp;
+  out.textContent = res.split(0,1);
+
 }
 
 document.querySelector(".b-6").addEventListener("click", f6);
@@ -158,7 +164,7 @@ function f9() {
       max = a9[i];
     }
   }
-  return max.length--;
+  return max.length-1;
 }
 
 document.querySelector(".b-9").addEventListener("click", () => {

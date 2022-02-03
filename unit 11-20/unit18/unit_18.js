@@ -55,8 +55,11 @@ document.querySelector(".b-3").onclick = t3;
 /*  На странице созданы 3 span.task-4 c атрибутом data. С помощью forEach переберите их и добавьте атрибуты в массив a4_res  Запускаться решение должно при вызове функции t4.*/
 
 function t4() {
+  const arr = document.querySelectorAll("span.task-4");
   const out = document.querySelector(".out-4");
-
+  arr.forEach(element => {
+    a4_res.push(element.getAttribute("data"));
+  });
   out.textContent = a4_res;
 }
 
@@ -138,7 +141,8 @@ document.querySelector(".b-9").onclick = t9;
 function t10() {
   const out = document.querySelector(".out-10");
   const a10 = { name: "ivan", age: 15, sex: 1, id: 45 };
-  a10_res = `http://127.0.0.1:5500/unit_18.html?`
+  const URL = "http://127.0.0.1:5500/unit_18.html?"
+  a10_res = `${URL}`
   Object.keys(a10).map((key) => {
     a10_res += `${key}=${a10[key]}&`;
   });
