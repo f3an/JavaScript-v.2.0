@@ -118,7 +118,7 @@ const f8 = () => {
     let temp = [...s8];
     for (let i = 0; i < temp.length; i++) {
         if (temp[i]>5) {
-            ar8 += temp[i]+ " ";
+            ar8.push(temp[i]);
         }
     }
     console.log(ar8);
@@ -201,12 +201,11 @@ let str13 = 'The name conjures up visions of plum pudding and Christmas punch qu
 
 
 const f13 = () => {
+    let obj = {};
 
     let arr = str13.split("");
     
     let s13 = new Set(arr);
-
-    let str = "{";
 
     for (let item of s13.keys()) {
         let count = 0;
@@ -216,11 +215,10 @@ const f13 = () => {
                 count++;
             }
         }
-        str += `"${item}" : ${count}, `;
+        obj[item] = count;
     }
-    str = str.slice(0, -2);
 
-    return str += "}"
+    return obj;
 }
 
 document.querySelector('.b-13').onclick = () => {
