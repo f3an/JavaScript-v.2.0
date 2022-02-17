@@ -2,7 +2,7 @@
 # This is where I will upload my homework from itgid.info courses
 =============================================================
 # JavaScript-v.2.0
-=============================================================
+
 ---------------------------------
 Unit 1. Start and write the first program
 ---------------------------------
