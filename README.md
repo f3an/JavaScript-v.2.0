@@ -1,18 +1,10 @@
 =============================================================
-<<<<<<< HEAD
 # This is where I will upload my homework from itgid.info courses
 =============================================================
 # JavaScript-v.2.0
-
 =============================================================
-##Unit 1. Start and write the first program
-=======
-# JavaScript-v.2.0
-=============================================================
-# This is where I will upload my homework from itgid.info cou
 ---------------------------------
 Unit 1. Start and write the first program
->>>>>>> 0214664051d269ca76d7b1a76754c47f58d652d1
 ---------------------------------
 ##Unit 2. Basics input
 ---------------------------------
@@ -64,10 +56,7 @@ Unit 1. Start and write the first program
 ---------------------------------
 ##Unit 27. Promise
 ---------------------------------
-<<<<<<< HEAD
 ##Unit 28. OOP in ES6
 ---------------------------------
-=======
 Unit 28. OOP in ES6
 ---------------------------------
->>>>>>> 0214664051d269ca76d7b1a76754c47f58d652d1
