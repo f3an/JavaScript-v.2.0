@@ -1,7 +1,7 @@
 
 # This is where I will upload my homework from itgid.info courses
 
-# JavaScript-v.2.0 <img width=30px src=https://cdn.iconscout.com/icon/free/png-256/javascript-2752148-2284965.png>
+# [JavaScript-v.2.0](https://github.com/f3an/JavaScript-v.2.0) <img width=30px src=https://cdn.iconscout.com/icon/free/png-256/javascript-2752148-2284965.png>
 
 ## [Unit 1. Start and write the first program](https://github.com/f3an/JavaScript-v.2.0/tree/main/unit%201-10/unit1)
 
